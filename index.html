@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishan Kulkarni - ML Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Lato:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ============ CARD BACKGROUND: 5 rows × 5 cards ============ -->
+<div class="card-background">
+    <div class="bg-card" data-row="1" data-index="0"></div>
+    <div class="bg-card" data-row="1" data-index="1"></div>
+    <div class="bg-card" data-row="1" data-index="2"></div>
+    <div class="bg-card" data-row="1" data-index="3"></div>
+    <div class="bg-card" data-row="1" data-index="4"></div>
+
+    <div class="bg-card" data-row="2" data-index="0"></div>
+    <div class="bg-card" data-row="2" data-index="1"></div>
+    <div class="bg-card" data-row="2" data-index="2"></div>
+    <div class="bg-card" data-row="2" data-index="3"></div>
+    <div class="bg-card" data-row="2" data-index="4"></div>
+
+    <div class="bg-card" data-row="3" data-index="0"></div>
+    <div class="bg-card" data-row="3" data-index="1"></div>
+    <div class="bg-card" data-row="3" data-index="2"></div>
+    <div class="bg-card" data-row="3" data-index="3"></div>
+    <div class="bg-card" data-row="3" data-index="4"></div>
+
+    <div class="bg-card" data-row="4" data-index="0"></div>
+    <div class="bg-card" data-row="4" data-index="1"></div>
+    <div class="bg-card" data-row="4" data-index="2"></div>
+    <div class="bg-card" data-row="4" data-index="3"></div>
+    <div class="bg-card" data-row="4" data-index="4"></div>
+
+    <div class="bg-card" data-row="5" data-index="0"></div>
+    <div class="bg-card" data-row="5" data-index="1"></div>
+    <div class="bg-card" data-row="5" data-index="2"></div>
+    <div class="bg-card" data-row="5" data-index="3"></div>
+    <div class="bg-card" data-row="5" data-index="4"></div>
+</div>
+
+<!-- ============ TOP BAR ============ -->
+<div class="theme-toggle" id="themeToggle"><div class="toggle-icon">☀️</div></div>
+<div class="mini-time" id="miniTime">00:00:00</div>
+<div class="home-button hidden" id="homeButton">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+</div>
+
+<!-- ============ WATCH ============ -->
+<div class="watch-scene" id="watchScene">
+    <div class="watch-assembly">
+
+        <!-- CROWN — sibling of bezel, lower z so bezel overlaps it -->
+        <div class="crown">
+            <div class="crown-body">
+                <div class="crown-line"></div>
+                <div class="crown-line"></div>
+                <div class="crown-line"></div>
+            </div>
+        </div>
+
+        <!-- BEZEL (rotates) -->
+        <div class="bezel" id="bezel">
+            <div class="bezel-markers" id="bezelMarkers"></div>
+        </div>
+
+        <!-- CASE (static shell) -->
+        <div class="case">
+            <div class="crystal"></div>
+
+            <!-- DIAL (rotates with bezel — contains indices + buttons + brand) -->
+            <div class="dial" id="dial">
+                <div class="sunburst"></div>
+
+                <!-- indices -->
+                <div class="indices">
+                    <div class="idx"       style="--i:1" ><div class="idx-mark"    ></div></div>
+                    <div class="idx"       style="--i:2" ><div class="idx-mark"    ></div></div>
+                    <div class="idx"       style="--i:4" ><div class="idx-mark"    ></div></div>
+                    <div class="idx"       style="--i:5" ><div class="idx-mark"    ></div></div>
+                    <div class="idx"       style="--i:7" ><div class="idx-mark"    ></div></div>
+                    <div class="idx"       style="--i:8" ><div class="idx-mark"    ></div></div>
+                    <div class="idx"       style="--i:10"><div class="idx-mark"    ></div></div>
+                    <div class="idx"       style="--i:11"><div class="idx-mark"    ></div></div>
+                </div>
+
+                <!-- DIAL BUTTONS (on the dial face, at 12 / 3 / 6 / 9) -->
+                <div class="dial-btn" data-section="contact"          style="--btn-hour:0" >CONTACT</div>
+                <div class="dial-btn" data-section="about"         style="--btn-hour:3" >ABOUT</div>
+                <div class="dial-btn" data-section="projects"      style="--btn-hour:6" >PROJECTS</div>
+                <div class="dial-btn" data-section="achievements"  style="--btn-hour:9" >AWARDS</div>
+
+                <!-- brand top -->
+                <div class="brand-top">
+                    <div class="crown-logo">
+                        <svg viewBox="0 0 50 50" width="28" height="28">
+                            <path d="M25 5 L30 15 L40 15 L32 22 L35 32 L25 25 L15 32 L18 22 L10 15 L20 15 Z"
+                                  fill="var(--rose-gold)" stroke="var(--rose-dark)" stroke-width="1"/>
+                        </svg>
+                    </div>
+                    <div class="brand-name">ISHAN KULKARNI</div>
+                    <div class="brand-model">MACHINE LEARNING STUDENT</div>
+                </div>
+
+                <!-- cert bottom -->
+                <div class="brand-bottom">
+                    <div class="cert-line">SUPERLATIVE CHRONOMETER</div>
+                    <div class="cert-line">OFFICIALLY CERTIFIED</div>
+                </div>
+
+                <!-- date window -->
+                <div class="date-box">
+                    <div class="date-cyclops"></div>
+                    <span class="date-num" id="dateNum">01</span>
+                </div>
+            </div><!-- /dial -->
+
+            <!-- HANDS — inside .case but OUTSIDE .dial so they do NOT rotate -->
+            <div class="hands">
+                <div class="hand hour"   id="hourHand"></div>
+                <div class="hand minute" id="minuteHand"></div>
+                <div class="hand second" id="secondHand"></div>
+                <div class="hub"></div>
+            </div>
+        </div><!-- /case -->
+    </div><!-- /watch-assembly -->
+</div><!-- /watch-scene -->
+
+<!-- ============ CONTENT ZONE ============ -->
+<div class="content-zone hidden" id="contentZone">
+
+    <!-- LEFT ACE (previous page) -->
+    <div class="ace left-ace" id="leftAce">
+        <div class="ace-inner">
+            <div class="ace-rank">A</div>
+            <div class="ace-suit" id="leftSuit">♣</div>
+            <div class="ace-name" id="leftName">AWARDS</div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content" id="mainContent">
+
+        <!-- ABOUT (contact info merged in) -->
+        <div class="page" data-page="about">
+            <h2>About Me</h2>
+            <div class="content">
+                <p class="intro">
+                    I'm a machine learning engineer who believes in precision—both in code and craftsmanship.
+                    Like a master watchmaker, I build systems where every component works in harmony.
+                </p>
+                <div class="grid-2">
+                    <div class="box">
+                        <h3>Background</h3>
+                        <p>5+ years building production ML systems. Based in Sydney, working globally.</p>
+                    </div>
+                    <div class="box">
+                        <h3>Expertise</h3>
+                        <ul>
+                            <li>Deep Learning & Neural Networks</li>
+                            <li>Computer Vision (YOLO, CNNs)</li>
+                            <li>Natural Language Processing</li>
+                            <li>MLOps & Cloud Deployment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="page hidden" data-page="contact">
+            <h2>Contact</h2>
+            <div class="content">
+
+                <p class="intro">
+                    Open to collaborations, opportunities, and interesting conversations.
+                </p>
+
+                <h3 class="contact-heading">Get In Touch</h3>
+                <div class="contact-grid">
+                    <a href="/cdn-cgi/l/email-protection#90f9e3f8f1fed0f5e8f1fde0fcf5bef3fffd" class="contact-card">
+                        <span class="contact-icon">📧</span>
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value">
+                            <span class="__cf_email__" data-cfemail="d7bea4bfb6b997b2afb6baa7bbb2f9b4b8ba">
+                                [email&#160;protected]
+                            </span>
+                        </span>
+                    </a>
+
+                    <a href="https://linkedin.com/in/ishankulkarni" class="contact-card" target="_blank">
+                        <span class="contact-icon">💼</span>
+                        <span class="contact-label">LinkedIn</span>
+                        <span class="contact-value">/in/ishankulkarni</span>
+                    </a>
+
+                    <a href="https://github.com/ishankulkarni" class="contact-card" target="_blank">
+                        <span class="contact-icon">💻</span>
+                        <span class="contact-label">GitHub</span>
+                        <span class="contact-value">/ishankulkarni</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- PROJECTS -->
+        <div class="page hidden" data-page="projects">
+            <h2>Projects</h2>
+            <div class="content">
+                <div class="project-grid">
+                    <div class="project">
+                        <h3>Neural Style Transfer</h3>
+                        <p>Real-time artistic style transfer using deep CNNs. AWS deployment, 10K+ users.</p>
+                        <div class="tags"><span>PyTorch</span><span>AWS</span></div>
+                        <button class="btn" data-page="demo-1">View Demo</button>
+                    </div>
+                    <div class="project">
+                        <h3>Time Series Forecasting</h3>
+                        <p>LSTM model predicting market trends with 87% accuracy.</p>
+                        <div class="tags"><span>TensorFlow</span><span>Finance</span></div>
+                        <button class="btn" data-page="demo-2">View Demo</button>
+                    </div>
+                    <div class="project">
+                        <h3>Multi-lingual NLP</h3>
+                        <p>Transformer sentiment analysis, 15+ languages, 92% F1.</p>
+                        <div class="tags"><span>BERT</span><span>FastAPI</span></div>
+                        <button class="btn" data-page="demo-3">View Demo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ACHIEVEMENTS -->
+        <div class="page hidden" data-page="achievements">
+            <h2>Achievements</h2>
+            <div class="content">
+                <div class="ach-list">
+                    <div class="ach">
+                        <div class="ach-icon">🏆</div>
+                        <div class="ach-info">
+                            <h3>Kaggle Winner</h3>
+                            <p>1st place, Computer Vision Challenge (2,500+ participants)</p>
+                            <button class="btn" data-page="kaggle">View Profile</button>
+                        </div>
+                    </div>
+                    <div class="ach">
+                        <div class="ach-icon">📜</div>
+                        <div class="ach-info">
+                            <h3>Research Publication</h3>
+                            <p>Novel attention mechanisms, NeurIPS 2023</p>
+                            <button class="btn" data-page="paper">Read Paper</button>
+                        </div>
+                    </div>
+                    <div class="ach">
+                        <div class="ach-icon">🌟</div>
+                        <div class="ach-info">
+                            <h3>Open Source</h3>
+                            <p>Top 100 TensorFlow contributor</p>
+                            <button class="btn" data-page="github">View GitHub</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DYNAMIC (sub-pages from project/ach buttons) -->
+        <div class="page hidden" data-page="dynamic">
+            <h2 id="dynamicTitle">Loading...</h2>
+            <div class="content" id="dynamicBody"><p>Content loading...</p></div>
+        </div>
+
+    </div><!-- /main-content -->
+
+    <!-- RIGHT ACE (next page) -->
+    <div class="ace right-ace" id="rightAce">
+        <div class="ace-inner">
+            <div class="ace-rank">A</div>
+            <div class="ace-suit" id="rightSuit">♥</div>
+            <div class="ace-name" id="rightName">PROJECTS</div>
+        </div>
+    </div>
+
+</div><!-- /content-zone -->
+
+<div id="shuffleOverlay" class="shuffle-overlay hidden">
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-face">♣</div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
