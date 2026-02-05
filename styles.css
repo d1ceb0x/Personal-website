@@ -768,6 +768,62 @@ body {
 .ach-icon { font-size:44px; }
 .ach-info h3 { font-size:20px; color:var(--text-primary); margin-bottom:10px; }
 
+/* ================= PROJECT DETAIL PAGES ================= */
+
+.project-detail {
+  background: var(--bg-secondary);
+  border-radius: 18px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.project-detail h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 18px;
+}
+
+.project-detail p {
+  line-height: 1.65;
+  opacity: 0.9;
+  margin-bottom: 16px;
+}
+
+/* Highlight sections */
+.project-block {
+  background: var(--bg-primary);
+  padding: 18px 20px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+}
+
+/* Action buttons */
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.project-links a {
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent-teal), var(--accent-blue));
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-links a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+}
+
+
 /* scrollbar */
 ::-webkit-scrollbar { width:8px; }
 ::-webkit-scrollbar-track { background:var(--bg-secondary); }

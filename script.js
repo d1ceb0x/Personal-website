@@ -365,11 +365,22 @@ document.getElementById('rightAce')?.addEventListener('click', () => aceClicked(
 // ==========================================
 document.addEventListener('click', e => {
     const btn = e.target.closest('.btn');
-    if (btn && !isAnimating) {
-        const page = btn.getAttribute('data-page');
-        if (page) loadDynamicPage(page);
+    if (!btn || isAnimating) return;
+
+    const page = btn.getAttribute('data-page');
+    if (!page) return;
+
+    // If HTML page exists → show it
+    if (document.querySelector(`.page[data-page="${page}"]`)) {
+        showPage(page);
+        showContent();
+        return;
     }
+
+    // Otherwise fallback to dynamic loader
+    loadDynamicPage(page);
 });
+
 
 function loadDynamicPage(name) {
     const pages = {
