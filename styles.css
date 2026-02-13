@@ -912,19 +912,17 @@ body {
      MOBILE NAV — CENTERED GRID
   ========================= */
 
-  .mobile-nav {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: min(360px, 92vw);
-
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-
-    z-index: 9999;
-  }
+    .mobile-nav {
+        position: fixed;
+        top: 48px;
+        left: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 12px;
+        z-index: 50;
+    }
 
   .mobile-nav button {
     background: var(--card-bg);

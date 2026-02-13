@@ -353,6 +353,20 @@ document.querySelectorAll('.dial-btn').forEach(btn => {
         if (section) navigateToSection(section);
     });
 });
+// ==========================================
+// MOBILE NAV BUTTON CLICKS
+// ==========================================
+document.querySelectorAll('.mobile-nav button').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const section = btn.getAttribute('data-section');
+        if (!section) return;
+
+        // Skip watch animations on mobile
+        showPage(section);
+        showContent();
+        currentSection = section;
+    });
+});
 
 // ==========================================
 // ACE CLICKS
