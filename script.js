@@ -480,3 +480,29 @@ document.addEventListener('keypress', e => {
         _secret = '';
     }
 });
+// ==========================================
+// MOBILE: HIDE TOP UI ON SCROLL
+// ==========================================
+
+let lastScrollY = window.scrollY;
+
+window.addEventListener("scroll", () => {
+
+  // Only run on mobile widths
+  if (window.innerWidth > 768) return;
+
+  const items = document.querySelectorAll(".hide-on-scroll");
+  const currentScroll = window.scrollY;
+
+  // At very top → show
+  if (currentScroll <= 5) {
+    items.forEach(el => el.classList.remove("hidden"));
+  }
+
+  // Scrolling down → hide
+  else if (currentScroll > lastScrollY) {
+    items.forEach(el => el.classList.add("hidden"));
+  }
+
+  lastScrollY = currentScroll;
+});

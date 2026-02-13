@@ -46,6 +46,19 @@ body {
 .mobile-nav {
   display: none;
 }
+/* =========================
+   HIDE-ON-SCROLL (MOBILE)
+========================= */
+
+.hide-on-scroll {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.hide-on-scroll.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-12px);
+}
 /* ==========================================
    CARD BACKGROUND — 5 rows, higher opacity
    ========================================== */
