@@ -884,7 +884,7 @@ body {
   .content-zone {
     position: relative;
     inset: 0;
-    padding: 90px 16px 40px;
+    padding: 110px 16px 120px;
   }
 
   .main-content {
@@ -892,47 +892,60 @@ body {
     max-width: 100%;
   }
 
-  /* Pages become normal blocks */
   .page {
     position: relative;
     width: 100%;
-    min-height: auto;
     padding: 24px;
   }
 
-  /* Remove skinny center box look */
   .content {
     max-width: 100%;
   }
 
-  /* Buttons become touch friendly */
   .btn {
     width: 100%;
-    text-align: center;
-    padding: 14px;
+    padding: 16px;
     font-size: 1rem;
   }
 
-  /* Simple top nav bar */
+  /* =========================
+     MOBILE NAV — CENTERED GRID
+  ========================= */
+
   .mobile-nav {
     position: fixed;
-    top: 48px;
-    left: 0;
-    width: 100%;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(360px, 92vw);
+
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    padding: 12px;
-    z-index: 50;
+    gap: 14px;
+
+    z-index: 9999;
   }
 
   .mobile-nav button {
-    background: var(--card);
-    border: none;
-    border-radius: 10px;
-    padding: 12px;
-    font-weight: 600;
-    color: var(--text);
+    background: var(--card-bg);
+    color: var(--text-primary);
+
+    border: 2px solid var(--accent-bronze);
+    border-radius: 16px;
+
+    padding: 18px 10px;
+
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    font-size: 0.9rem;
+
+    text-transform: uppercase;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  }
+
+  .mobile-nav button:active {
+    transform: scale(0.96);
   }
 
 }
