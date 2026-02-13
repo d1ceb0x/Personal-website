@@ -868,11 +868,18 @@ body {
 @media (max-width: 480px) {
   :root { --watch-scale: 0.5; }
 }
+
 /* ========================= */
 /* MOBILE MODE */
 /* ========================= */
 
 @media (max-width: 768px) {
+
+  /* Enable scrolling */
+  html, body {
+    overflow-y: auto;
+    height: auto;
+  }
 
   /* Hide heavy desktop visuals */
   .watch-scene,
@@ -880,66 +887,73 @@ body {
     display: none !important;
   }
 
-  /* Content fills screen */
+  /* Hide home button (not needed on mobile) */
+  .home-button {
+    display: none !important;
+  }
+
+  /* =========================
+     CONTENT LAYOUT
+  ========================= */
+
   .content-zone {
     position: relative;
     inset: 0;
-    padding: 110px 16px 120px;
+    padding: 200px 16px 40px; /* space for top bar + nav */
   }
 
   .main-content {
     width: 100%;
     max-width: 100%;
+    height: auto;
+    margin-top: 0;
+    padding: 24px;
   }
 
   .page {
     position: relative;
     width: 100%;
-    padding: 24px;
+    min-height: auto;
+    padding: 0;
   }
 
-  .content {
-    max-width: 100%;
-  }
-
+  /* Buttons */
   .btn {
     width: 100%;
-    padding: 16px;
+    padding: 14px;
     font-size: 1rem;
   }
 
   /* =========================
-     MOBILE NAV — CENTERED GRID
+     MOBILE NAV
   ========================= */
 
-    .mobile-nav {
-        position: fixed;
-        top: 48px;
-        left: 0;
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        padding: 12px;
-        z-index: 50;
-    }
+  .mobile-nav {
+    position: fixed;
+    top: 110px;   /* below theme toggle + clock */
+    left: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 12px;
+    z-index: 100;
+  }
 
   .mobile-nav button {
     background: var(--card-bg);
     color: var(--text-primary);
 
     border: 2px solid var(--accent-bronze);
-    border-radius: 16px;
+    border-radius: 14px;
 
-    padding: 18px 10px;
-
+    padding: 12px 8px;
     font-weight: 800;
-    letter-spacing: 1.5px;
-    font-size: 0.9rem;
+    letter-spacing: 1.3px;
+    font-size: 0.85rem;
 
     text-transform: uppercase;
-
-    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
   }
 
   .mobile-nav button:active {
