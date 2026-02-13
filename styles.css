@@ -174,6 +174,7 @@ body {
 .watch-assembly {
     position:relative;
     width:780px; height:780px;
+    transform: scale(var(--watch-scale, 1));
 }
 
 /* ==========================================
@@ -833,4 +834,35 @@ body {
 @media (max-width:1200px) {
     .watch-assembly { width:620px; height:620px; }
     .grid-2, .contact-grid { grid-template-columns:1fr; }
+}
+
+/* ==========================
+   WATCH AUTO SCALING
+========================== */
+
+:root {
+  --watch-scale: 1;
+}
+
+/* Laptops & smaller desktops */
+@media (max-width: 1400px) {
+  :root { --watch-scale: 0.9; }
+}
+
+@media (max-width: 1200px) {
+  :root { --watch-scale: 0.8; }
+}
+
+@media (max-width: 992px) {
+  :root { --watch-scale: 0.7; }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  :root { --watch-scale: 0.6; }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  :root { --watch-scale: 0.5; }
 }
