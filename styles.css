@@ -43,7 +43,9 @@ body {
     overflow: hidden;
     height: 100vh;
 }
-
+.mobile-nav {
+  display: none;
+}
 /* ==========================================
    CARD BACKGROUND — 5 rows, higher opacity
    ========================================== */
@@ -866,3 +868,72 @@ body {
 @media (max-width: 480px) {
   :root { --watch-scale: 0.5; }
 }
+/* ========================= */
+/* MOBILE MODE */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  /* Hide heavy desktop visuals */
+  .watch-scene,
+  .ace {
+    display: none !important;
+  }
+
+  /* Content fills screen */
+  .content-zone {
+    position: relative;
+    inset: 0;
+    padding: 90px 16px 40px;
+  }
+
+  .main-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Pages become normal blocks */
+  .page {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    padding: 24px;
+  }
+
+  /* Remove skinny center box look */
+  .content {
+    max-width: 100%;
+  }
+
+  /* Buttons become touch friendly */
+  .btn {
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+    font-size: 1rem;
+  }
+
+  /* Simple top nav bar */
+  .mobile-nav {
+    position: fixed;
+    top: 48px;
+    left: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 12px;
+    z-index: 50;
+  }
+
+  .mobile-nav button {
+    background: var(--card);
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+}
+
