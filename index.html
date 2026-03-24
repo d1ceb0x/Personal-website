@@ -1,508 +1,839 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ishan Kulkarni - ML Portfolio</title>
-
-<link rel="stylesheet" href="styles.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Lato:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-</head>
-
-<body>
-<div class="mobile-nav hide-on-scroll">
-  <button data-section="about">About</button>
-  <button data-section="projects">Projects</button>
-  <button data-section="achievements">Awards</button>
-  <button data-section="contact">Contact</button>
-</div>
-
-<!-- ================= CARD BACKGROUND ================= -->
-<div class="card-background">
-<script>
-for(let r=1;r<=5;r++){
-for(let i=0;i<5;i++){
-document.write(`<div class="bg-card" data-row="${r}" data-index="${i}"></div>`);
-}}
-</script>
-</div>
-
-<!-- ================= TOP BAR ================= -->
-<div class="theme-toggle hide-on-scroll" id="themeToggle"><div class="toggle-icon">☀️</div></div>
-<div class="mini-time hide-on-scroll" id="miniTime">00:00:00</div>
-
-<div class="home-button hidden" id="homeButton">
-<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-<path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-</svg>
-</div>
-
-<!-- ================= WATCH ================= -->
-<div class="watch-scene" id="watchScene">
-<div class="watch-assembly">
-
-<div class="crown"><div class="crown-body">
-<div class="crown-line"></div><div class="crown-line"></div><div class="crown-line"></div>
-</div></div>
-
-<div class="bezel" id="bezel"><div class="bezel-markers" id="bezelMarkers"></div></div>
-
-<div class="case">
-<div class="crystal"></div>
-
-<div class="dial" id="dial">
-<div class="sunburst"></div>
-
-<div class="indices">
-<div class="idx" style="--i:1"><div class="idx-mark"></div></div>
-<div class="idx" style="--i:2"><div class="idx-mark"></div></div>
-<div class="idx" style="--i:4"><div class="idx-mark"></div></div>
-<div class="idx" style="--i:5"><div class="idx-mark"></div></div>
-<div class="idx" style="--i:7"><div class="idx-mark"></div></div>
-<div class="idx" style="--i:8"><div class="idx-mark"></div></div>
-<div class="idx" style="--i:10"><div class="idx-mark"></div></div>
-<div class="idx" style="--i:11"><div class="idx-mark"></div></div>
-</div>
-
-<div class="dial-btn" data-section="contact" style="--btn-hour:0">CONTACT</div>
-<div class="dial-btn" data-section="about" style="--btn-hour:3">ABOUT</div>
-<div class="dial-btn" data-section="projects" style="--btn-hour:6">PROJECTS</div>
-<div class="dial-btn" data-section="achievements" style="--btn-hour:9">AWARDS</div>
-
-<div class="brand-top">
-<div class="brand-name">ISHAN KULKARNI</div>
-<div class="brand-model">ML STUDENT & RESEARCHER</div>
-</div>
-
-<div class="brand-bottom">
-<div class="cert-line">SUPERLATIVE CHRONOMETER</div>
-<div class="cert-line">OFFICIALLY CERTIFIED</div>
-</div>
-
-<div class="date-box"><span class="date-num" id="dateNum">01</span></div>
-
-</div>
-
-<div class="hands">
-<div class="hand hour" id="hourHand"></div>
-<div class="hand minute" id="minuteHand"></div>
-<div class="hand second" id="secondHand"></div>
-<div class="hub"></div>
-</div>
-
-</div>
-</div>
-</div>
-
-<!-- ================= CONTENT ZONE ================= -->
-<div class="content-zone hidden" id="contentZone">
-
-<div class="ace left-ace" id="leftAce">
-<div class="ace-inner">
-<div class="ace-rank">A</div>
-<div class="ace-suit" id="leftSuit">♣</div>
-<div class="ace-name" id="leftName">AWARDS</div>
-</div>
-</div>
-
-<div class="main-content" id="mainContent">
-
-<!-- ABOUT -->
-<div class="page" data-page="about">
-<h2>About Me</h2>
-<div class="content">
-<p class="intro">
-Bachelor of Advanced Computing student at the University of Sydney and Dalyell Scholar,
-interested in machine learning, computer vision, and applied research.
-</p>
-
-<div class="grid-2">
-<div class="box">
-<h3>Background</h3>
-<p>
-Bachelor of Advanced Computing (2025–2028)<br>
-Dalyell Scholar<br>
-NCSS 2024
-</p>
-</div>
-
-<div class="box">
-<h3>Skills</h3>
-<ul>
-<li>Python, Java, JavaScript, SQL</li>
-<li>Machine Learning</li>
-<li>Computer Vision</li>
-<li>Backend Development</li>
-<li>HTML & CSS</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-
-<!-- CONTACT -->
-<div class="page hidden" data-page="contact">
-<h2>Contact</h2>
-<div class="content">
-
-<div class="contact-grid">
-
-<a href="mailto:inusyd@gmail.com" class="contact-card">
-<span class="contact-icon">📧</span>
-<span class="contact-label">Email</span>
-<span class="contact-value">inusyd@gmail.com</span>
-</a>
-
-<a href="https://www.linkedin.com/in/ishan-kulkarni-73015b2b5/" target="_blank" class="contact-card">
-<span class="contact-icon">💼</span>
-<span class="contact-label">LinkedIn</span>
-<span class="contact-value">/ishan-kulkarni</span>
-</a>
-
-<a href="https://github.com/d1ceb0x/" target="_blank" class="contact-card">
-<span class="contact-icon">💻</span>
-<span class="contact-label">GitHub</span>
-<span class="contact-value">/d1ceb0x</span>
-</a>
-
-</div>
-</div>
-</div>
-
-<!-- PROJECTS -->
-<div class="page hidden" data-page="projects">
-<h2>Projects</h2>
-
-<div class="content">
-<div class="project-grid">
-
-<!-- GAIA -->
-<div class="project">
-<h3>Stellar Property Prediction (GAIA DR2)</h3>
-<p>Machine learning regression models predicting stellar brightness and properties with 99.6% accuracy.</p>
-<div class="tags"><span>Python</span><span>ML</span><span>Astronomy</span></div>
-<button class="btn" data-page="project-gaia">View Details</button>
-</div>
-
-<!-- ALEXA -->
-<div class="project">
-<h3>Alexa Horizon – Space Voice Assistant</h3>
-<p>Voice-first AI assistant integrating live space data, NLP, and serverless backend.</p>
-<div class="tags"><span>Python</span><span>AWS</span><span>NLP</span></div>
-<button class="btn" data-page="project-alexa">View Details</button>
-</div>
-
-<!-- MATCHPOINT -->
-<div class="project">
-<h3>MatchPoint – Biomechanics Tennis Platform</h3>
-<p>Computer vision system analysing biomechanics to personalise tennis coaching.</p>
-<div class="tags"><span>Computer Vision</span><span>JavaScript</span></div>
-<button class="btn" data-page="project-matchpoint">View Details</button>
-</div>
-
-<!-- URBAN COOLING -->
-<div class="project">
-<h3>Sydney Urban Cooling</h3>
-<p>Simulation-based web app showing how tree canopy reduces urban heat.</p>
-<div class="tags"><span>Leaflet.js</span><span>OpenWeather API</span></div>
-<button class="btn" data-page="project-urban">View Details</button>
-</div>
-
-<!-- SHARKS -->
-<div class="project">
-<h3>Sharks From Space</h3>
-<p>World-first platform combining NASA satellite data and AI to predict shark foraging.</p>
-<div class="tags"><span>ML</span><span>NASA</span><span>Conservation</span></div>
-<button class="btn" data-page="project-sharks">View Details</button>
-</div>
-
-<!-- LOREAL -->
-<div class="project">
-<h3>L'Oreal Hackathon</h3>
-<p>Active hackathon project.</p>
-<div class="tags"><span>Hackathon</span></div>
-<button class="btn" data-page="project-loreal">View Details</button>
-</div>
-
-</div>
-</div>
-</div>
-
-
-<!-- ACHIEVEMENTS -->
-<div class="page hidden" data-page="achievements">
-<h2>Achievements</h2>
-<div class="content">
-
-<div class="ach-list">
-
-<div class="ach">
-<div class="ach-icon">🎓</div>
-<div class="ach-info">
-<h3>Dalyell Scholar</h3>
-<p>University of Sydney</p>
-</div>
-</div>
-
-<div class="ach">
-<div class="ach-icon">🥈</div>
-<div class="ach-info">
-<h3>2nd Place – Comm-STEM × Canva Hackathon</h3>
-<p>Sydney Urban Cooling</p>
-</div>
-</div>
-
-<div class="ach">
-<div class="ach-icon">🧠</div>
-<div class="ach-info">
-<h3>NCSS 2024</h3>
-<p>National Computer Science Summer School</p>
-</div>
-</div>
-
-</div>
-</div>
-</div>
-<!-- ================= PROJECT DETAIL PAGES ================= -->
-
-<!-- GAIA -->
-<div class="page hidden" data-page="project-gaia">
-  <div class="content project-detail">
-
-    <button class="btn" data-page="projects">← Back to Projects</button>
-
-    <h2>Stellar Property Prediction (GAIA DR2)</h2>
-
-    <div class="project-block">
-      <p>
-        Four-month machine learning research project analysing regression models
-        on the GAIA DR2 stellar dataset to predict stellar parameters such as
-        brightness, mass, and metallicity.
-      </p>
-    </div>
-
-    <div class="project-block">
-      <p>
-        After performing a literature review, a research gap was identified around
-        ML-based stellar brightness prediction. Multiple regression models were
-        implemented and statistically evaluated using F-tests and Pearson
-        correlation (α = 0.05).
-      </p>
-    </div>
-
-    <div class="project-block">
-      <p>
-        Best models achieved ~99.6% accuracy. Polynomial regression and random
-        forest performed strongest, while SVR showed higher error.
-      </p>
-    </div>
-
-    <div class="project-links">
-      <a href="https://lnkd.in/eAgczC48" target="_blank">📄 Report & Code</a>
-      <a href="https://www.linkedin.com/feed/update/urn:li:activity:7185778524597723137/" target="_blank">
-        💼 LinkedIn Post
-      </a>
-    </div>
-
-  </div>
-</div>
-
-
-<!-- ALEXA -->
-<div class="page hidden" data-page="project-alexa">
-  <div class="content project-detail">
-
-    <button class="btn" data-page="projects">← Back to Projects</button>
-
-    <h2>Alexa Horizon – Space Voice Assistant</h2>
-
-    <div class="project-block">
-      <p>
-        Voice-first space-themed assistant integrating live APIs, NLP, and
-        serverless backend infrastructure.
-      </p>
-    </div>
-
-    <div class="project-block">
-      <p>
-        Built using Python, Flask-Ask, AWS Lambda, DynamoDB, REST APIs, and SSML.
-        Tested locally on a Linux homelab using Docker and Raspberry Pi.
-      </p>
-    </div>
-
-    <div class="project-block">
-      <p>
-        Currently extending into an ML pipeline for predicting movements in
-        space-sector equities using NLP sentiment analysis.
-      </p>
-    </div>
-
-    <div class="project-links">
-      <a href="https://www.linkedin.com/feed/update/urn:li:activity:7364827627322286080/" target="_blank">
-        💼 LinkedIn Post
-      </a>
-    </div>
-
-  </div>
-</div>
-
-
-<!-- MATCHPOINT -->
-<div class="page hidden" data-page="project-matchpoint">
-  <div class="content project-detail">
-
-    <button class="btn" data-page="projects">← Back to Projects</button>
-
-    <h2>MatchPoint – Biomechanics Tennis Platform</h2>
-
-    <div class="project-block">
-      <p>
-        Computer vision-powered tennis platform built at Hack48 that analyses
-        biomechanics and swing footage to generate personalised movement insights.
-      </p>
-    </div>
-
-    <div class="project-block">
-      <p>
-        Combines dominant side detection, flexibility profiling, injury history,
-        and CV-based swing analysis to adapt technique to an individual’s body.
-      </p>
-    </div>
-
-    <div class="project-block">
-      <p>
-        Reached 200+ users within 24 hours.
-      </p>
-    </div>
-
-    <div class="project-links">
-      <a href="https://www.matchpoint.fit" target="_blank">🌐 Live Website</a>
-    </div>
-
-  </div>
-</div>
-
-
-<!-- URBAN COOLING -->
-<div class="page hidden" data-page="project-urban">
-  <div class="content project-detail">
-
-    <button class="btn" data-page="projects">← Back to Projects</button>
-
-    <h2>Sydney Urban Cooling</h2>
-
-    <div class="project-block">
-      <p>
-        Interactive web simulation showing how increasing tree canopy coverage
-        can reduce Sydney’s urban heat islands.
-      </p>
-    </div>
-
-    <div class="project-block">
-      <p>
-        Users can draw trees, simulate temperature change, upload community
-        readings, and view live heatmaps.
-      </p>
-    </div>
-
-    <div class="project-block">
-      <p>
-        Built with HTML, CSS, JavaScript, Leaflet.js, and OpenWeather API.
-      </p>
-    </div>
-
-    <div class="project-links">
-      <a href="https://github.com/Kso6/COMMSTEM-X-CANVA-HACKATHON" target="_blank">
-        💻 GitHub Repository
-      </a>
-    </div>
-
-  </div>
-</div>
-
-
-<!-- SHARKS -->
-<div class="page hidden" data-page="project-sharks">
-  <div class="content project-detail">
-
-    <button class="btn" data-page="projects">← Back to Projects</button>
-
-    <h2>Sharks From Space</h2>
-
-    <div class="project-block">
-      <p>
-        World-first platform integrating real-time NASA satellite data (SWOT,
-        MODIS, PACE) with AI to predict shark foraging behaviour with 87%
-        validated accuracy.
-      </p>
-    </div>
-
-    <div class="project-block">
-      <p>
-        Includes a novel 4D spatiotemporal Shark Foraging Index and a
-        revolutionary non-invasive gastric biosensor for validation.
-      </p>
-    </div>
-
-    <div class="project-block">
-      <p>
-        Aims to improve marine conservation and reduce shark-human conflict
-        globally.
-      </p>
-    </div>
-
-  </div>
-</div>
-
-
-<!-- LOREAL -->
-<div class="page hidden" data-page="project-loreal">
-  <div class="content project-detail">
-
-    <button class="btn" data-page="projects">← Back to Projects</button>
-
-    <h2>L'Oréal Hackathon</h2>
-
-    <div class="project-block">
-      <p>
-        Currently in development.
-      </p>
-    </div>
-
-    <div class="project-links">
-      <a href="https://github.com/Kso6/Loreal-Hackathon" target="_blank">
-        💻 GitHub Repository
-      </a>
-    </div>
-
-  </div>
-</div>
-
-
-</div>
-
-<div class="ace right-ace" id="rightAce">
-<div class="ace-inner">
-<div class="ace-rank">A</div>
-<div class="ace-suit" id="rightSuit">♥</div>
-<div class="ace-name" id="rightName">PROJECTS</div>
-</div>
-</div>
-
-
-</div>
-
-<!-- SHUFFLE -->
-<div id="shuffleOverlay" class="shuffle-overlay hidden">
-<div class="flip-card">
-<div class="flip-card-inner">
-<div class="flip-card-face">♣</div>
-</div>
-</div>
-</div>
-
-<script src="script.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ishan Kulkarni - ML Portfolio</title>
+
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Lato:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+
+    <body>
+        <div class="mobile-nav hide-on-scroll">
+            <button data-section="about">About</button>
+            <button data-section="projects">Projects</button>
+            <button data-section="achievements">Awards</button>
+            <button data-section="contact">Contact</button>
+        </div>
+
+        <!-- ================= CARD BACKGROUND ================= -->
+        <div class="card-background">
+            <script>
+                for (let r = 1; r <= 5; r++) {
+                    for (let i = 0; i < 5; i++) {
+                        document.write(
+                            `<div class="bg-card" data-row="${r}" data-index="${i}"></div>`,
+                        );
+                    }
+                }
+            </script>
+        </div>
+
+        <!-- ================= TOP BAR ================= -->
+        <div class="theme-toggle hide-on-scroll" id="themeToggle">
+            <div class="toggle-icon">☀️</div>
+        </div>
+        <div class="mini-time hide-on-scroll" id="miniTime">00:00:00</div>
+
+        <div class="home-button hidden" id="homeButton">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+            </svg>
+        </div>
+
+        <!-- ================= WATCH ================= -->
+        <div class="watch-scene" id="watchScene">
+            <div class="watch-assembly">
+                <div class="crown">
+                    <div class="crown-body">
+                        <div class="crown-line"></div>
+                        <div class="crown-line"></div>
+                        <div class="crown-line"></div>
+                    </div>
+                </div>
+
+                <div class="bezel" id="bezel">
+                    <div class="bezel-markers" id="bezelMarkers"></div>
+                </div>
+
+                <div class="case">
+                    <div class="crystal"></div>
+
+                    <div class="dial" id="dial">
+                        <div class="sunburst"></div>
+
+                        <div class="indices">
+                            <div class="idx" style="--i: 1">
+                                <div class="idx-mark"></div>
+                            </div>
+                            <div class="idx" style="--i: 2">
+                                <div class="idx-mark"></div>
+                            </div>
+                            <div class="idx" style="--i: 4">
+                                <div class="idx-mark"></div>
+                            </div>
+                            <div class="idx" style="--i: 5">
+                                <div class="idx-mark"></div>
+                            </div>
+                            <div class="idx" style="--i: 7">
+                                <div class="idx-mark"></div>
+                            </div>
+                            <div class="idx" style="--i: 8">
+                                <div class="idx-mark"></div>
+                            </div>
+                            <div class="idx" style="--i: 10">
+                                <div class="idx-mark"></div>
+                            </div>
+                            <div class="idx" style="--i: 11">
+                                <div class="idx-mark"></div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="dial-btn"
+                            data-section="contact"
+                            style="--btn-hour: 0"
+                        >
+                            CONTACT
+                        </div>
+                        <div
+                            class="dial-btn"
+                            data-section="about"
+                            style="--btn-hour: 3"
+                        >
+                            ABOUT
+                        </div>
+                        <div
+                            class="dial-btn"
+                            data-section="projects"
+                            style="--btn-hour: 6"
+                        >
+                            PROJECTS
+                        </div>
+                        <div
+                            class="dial-btn"
+                            data-section="achievements"
+                            style="--btn-hour: 9"
+                        >
+                            AWARDS
+                        </div>
+
+                        <div class="brand-top">
+                            <div class="brand-name">ISHAN KULKARNI</div>
+                            <div class="brand-model">
+                                ML STUDENT & RESEARCHER
+                            </div>
+                        </div>
+
+                        <div class="brand-bottom">
+                            <div class="cert-line">SUPERLATIVE CHRONOMETER</div>
+                            <div class="cert-line">OFFICIALLY CERTIFIED</div>
+                        </div>
+
+                        <div class="date-box">
+                            <span class="date-num" id="dateNum">01</span>
+                        </div>
+                    </div>
+
+                    <div class="hands">
+                        <div class="hand hour" id="hourHand"></div>
+                        <div class="hand minute" id="minuteHand"></div>
+                        <div class="hand second" id="secondHand"></div>
+                        <div class="hub"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= CONTENT ZONE ================= -->
+        <div class="content-zone hidden" id="contentZone">
+            <div class="ace left-ace" id="leftAce">
+                <div class="ace-inner">
+                    <div class="ace-rank">A</div>
+                    <div class="ace-suit" id="leftSuit">♣</div>
+                    <div class="ace-name" id="leftName">AWARDS</div>
+                </div>
+            </div>
+
+            <div class="main-content" id="mainContent">
+                <!-- ABOUT -->
+                <div class="page" data-page="about">
+                    <h2>About Me</h2>
+                    <div class="content">
+                        <p class="intro">
+                            Bachelor of Advanced Computing student at the
+                            University of Sydney and Dalyell Scholar, interested
+                            in machine learning, computer vision, and applied
+                            research.
+                        </p>
+
+                        <div class="grid-2">
+                            <div class="box">
+                                <h3>Background</h3>
+                                <p>
+                                    Bachelor of Advanced Computing
+                                    (2025–2028)<br />
+                                    Dalyell Scholar<br />
+                                    NCSS 2024
+                                </p>
+                            </div>
+
+                            <div class="box">
+                                <h3>Skills</h3>
+                                <ul>
+                                    <li>Python, Java, JavaScript, SQL</li>
+                                    <li>Machine Learning</li>
+                                    <li>Computer Vision</li>
+                                    <li>Backend Development</li>
+                                    <li>HTML & CSS</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTACT -->
+                <div class="page hidden" data-page="contact">
+                    <h2>Contact</h2>
+                    <div class="content">
+                        <div class="contact-grid">
+                            <a
+                                href="mailto:inusyd@gmail.com"
+                                class="contact-card"
+                            >
+                                <span class="contact-icon">📧</span>
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value"
+                                    >inusyd@gmail.com</span
+                                >
+                            </a>
+
+                            <a
+                                href="https://www.linkedin.com/in/ishan-kulkarni-73015b2b5/"
+                                target="_blank"
+                                class="contact-card"
+                            >
+                                <span class="contact-icon">💼</span>
+                                <span class="contact-label">LinkedIn</span>
+                                <span class="contact-value"
+                                    >/ishan-kulkarni</span
+                                >
+                            </a>
+
+                            <a
+                                href="https://github.com/d1ceb0x/"
+                                target="_blank"
+                                class="contact-card"
+                            >
+                                <span class="contact-icon">💻</span>
+                                <span class="contact-label">GitHub</span>
+                                <span class="contact-value">/d1ceb0x</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECTS -->
+                <div class="page hidden" data-page="projects">
+                    <h2>Projects</h2>
+
+                    <div class="content">
+                        <div class="project-grid">
+                            <!-- GAIA -->
+                            <div class="project">
+                                <h3>Stellar Property Prediction (GAIA DR2)</h3>
+                                <p>
+                                    Machine learning regression models
+                                    predicting stellar brightness and properties
+                                    with 99.6% accuracy.
+                                </p>
+                                <div class="tags">
+                                    <span>Python</span><span>ML</span
+                                    ><span>Astronomy</span>
+                                </div>
+                                <button class="btn" data-page="project-gaia">
+                                    View Details
+                                </button>
+                            </div>
+
+                            <!-- ALEXA -->
+                            <div class="project">
+                                <h3>Alexa Horizon – Space Voice Assistant</h3>
+                                <p>
+                                    Voice-first AI assistant integrating live
+                                    space data, NLP, and serverless backend.
+                                </p>
+                                <div class="tags">
+                                    <span>Python</span><span>AWS</span
+                                    ><span>NLP</span>
+                                </div>
+                                <button class="btn" data-page="project-alexa">
+                                    View Details
+                                </button>
+                            </div>
+
+                            <!-- MATCHPOINT -->
+                            <div class="project">
+                                <h3>
+                                    MatchPoint – Biomechanics Tennis Platform
+                                </h3>
+                                <p>
+                                    Computer vision system analysing
+                                    biomechanics to personalise tennis coaching.
+                                </p>
+                                <div class="tags">
+                                    <span>Computer Vision</span
+                                    ><span>JavaScript</span>
+                                </div>
+                                <button
+                                    class="btn"
+                                    data-page="project-matchpoint"
+                                >
+                                    View Details
+                                </button>
+                            </div>
+
+                            <!-- URBAN COOLING -->
+                            <div class="project">
+                                <h3>Sydney Urban Cooling</h3>
+                                <p>
+                                    Simulation-based web app showing how tree
+                                    canopy reduces urban heat.
+                                </p>
+                                <div class="tags">
+                                    <span>Leaflet.js</span
+                                    ><span>OpenWeather API</span>
+                                </div>
+                                <button class="btn" data-page="project-urban">
+                                    View Details
+                                </button>
+                            </div>
+
+                            <!-- SHARKS -->
+                            <div class="project">
+                                <h3>Sharks From Space</h3>
+                                <p>
+                                    World-first platform combining NASA
+                                    satellite data and AI to predict shark
+                                    foraging.
+                                </p>
+                                <div class="tags">
+                                    <span>ML</span><span>NASA</span
+                                    ><span>Conservation</span>
+                                </div>
+                                <button class="btn" data-page="project-sharks">
+                                    View Details
+                                </button>
+                            </div>
+
+                            <!-- LOREAL -->
+                            <div class="project">
+                                <h3>L'Oreal Hackathon</h3>
+                                <p>Active hackathon project.</p>
+                                <div class="tags"><span>Hackathon</span></div>
+                                <button class="btn" data-page="project-loreal">
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= ACHIEVEMENTS PAGE ================= -->
+                <div class="page hidden" data-page="achievements">
+                    <h2>Awards &amp; Certifications</h2>
+                    <div class="content">
+                        <!-- ── CERTIFICATIONS ─────────────────────────────── -->
+                        <div class="ach-section">
+                            <div class="ach-section-header">
+                                <span class="ach-section-icon">📜</span>
+                                <h3 class="ach-section-title">
+                                    Certifications
+                                </h3>
+                            </div>
+
+                            <div class="cert-grid">
+                                <div class="cert-card">
+                                    <div class="cert-card-accent"></div>
+                                    <div class="cert-card-body">
+                                        <div class="cert-issuer">
+                                            Grok Learning
+                                        </div>
+                                        <div class="cert-name">
+                                            HTML &amp; CSS Mastery
+                                        </div>
+                                    </div>
+                                    <span class="cert-badge">Web Dev</span>
+                                </div>
+
+                                <div class="cert-card">
+                                    <div class="cert-card-accent"></div>
+                                    <div class="cert-card-body">
+                                        <div class="cert-issuer">Kaggle</div>
+                                        <div class="cert-name">
+                                            Intro to Machine Learning
+                                        </div>
+                                    </div>
+                                    <span class="cert-badge">ML</span>
+                                </div>
+
+                                <div class="cert-card">
+                                    <div class="cert-card-accent"></div>
+                                    <div class="cert-card-body">
+                                        <div class="cert-issuer">
+                                            Python Institute
+                                        </div>
+                                        <div class="cert-name">
+                                            PCAP – Certified Associate in Python
+                                            Programming
+                                        </div>
+                                    </div>
+                                    <span class="cert-badge">Python</span>
+                                </div>
+
+                                <div class="cert-card">
+                                    <div class="cert-card-accent"></div>
+                                    <div class="cert-card-body">
+                                        <div class="cert-issuer">Udemy</div>
+                                        <div class="cert-name">
+                                            Master Data Science
+                                        </div>
+                                    </div>
+                                    <span class="cert-badge">Data Science</span>
+                                </div>
+
+                                <div class="cert-card">
+                                    <div class="cert-card-accent"></div>
+                                    <div class="cert-card-body">
+                                        <div class="cert-issuer">Udemy</div>
+                                        <div class="cert-name">
+                                            Data Structures &amp; Algorithms:
+                                            Zero to Hero in Java
+                                        </div>
+                                    </div>
+                                    <span class="cert-badge">DSA</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ── HACKATHON PLACEMENTS ───────────────────────── -->
+                        <div class="ach-section">
+                            <div class="ach-section-header">
+                                <span class="ach-section-icon">🏆</span>
+                                <h3 class="ach-section-title">
+                                    Hackathon Placements
+                                </h3>
+                            </div>
+
+                            <div class="hack-list">
+                                <div class="hack-item">
+                                    <div class="hack-place gold">
+                                        2<sup>nd</sup>
+                                    </div>
+                                    <div class="hack-info">
+                                        <div class="hack-event">
+                                            Comm-STEM × Canva Hackathon
+                                        </div>
+                                        <div class="hack-detail">
+                                            Sydney Urban Cooling — interactive
+                                            tree-canopy heat simulation
+                                        </div>
+                                    </div>
+                                    <span class="hack-medal">🥈</span>
+                                </div>
+
+                                <div class="hack-item">
+                                    <div class="hack-place silver">HM</div>
+                                    <div class="hack-info">
+                                        <div class="hack-event">
+                                            NASA Space Apps Challenge
+                                        </div>
+                                        <div class="hack-detail">
+                                            Honourable Mention — Sharks From
+                                            Space platform
+                                        </div>
+                                    </div>
+                                    <span class="hack-medal">🌟</span>
+                                </div>
+
+                                <div class="hack-item">
+                                    <div class="hack-place bronze">
+                                        3<sup>rd</sup>
+                                    </div>
+                                    <div class="hack-info">
+                                        <div class="hack-event">
+                                            AI Dev Days (Regional)
+                                        </div>
+                                        <div class="hack-detail">
+                                            3rd place regional placement
+                                        </div>
+                                    </div>
+                                    <span class="hack-medal">🥉</span>
+                                </div>
+
+                                <div class="hack-item">
+                                    <div class="hack-place milestone">1K+</div>
+                                    <div class="hack-info">
+                                        <div class="hack-event">Hack48</div>
+                                        <div class="hack-detail">
+                                            MatchPoint — 1,000+ users within 24
+                                            hours of launch
+                                        </div>
+                                    </div>
+                                    <span class="hack-medal">🚀</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ── MISCELLANEOUS ──────────────────────────────── -->
+                        <div class="ach-section">
+                            <div class="ach-section-header">
+                                <span class="ach-section-icon">🎖️</span>
+                                <h3 class="ach-section-title">Miscellaneous</h3>
+                            </div>
+
+                            <div class="misc-grid">
+                                <div class="misc-card">
+                                    <div class="misc-icon">🧮</div>
+                                    <div class="misc-body">
+                                        <div class="misc-category">
+                                            Algorithmic Competitions
+                                        </div>
+                                        <div class="misc-name">
+                                            Australian Informatics Olympiad
+                                            (AIO) &amp; OUCC
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="misc-card">
+                                    <div class="misc-icon">📐</div>
+                                    <div class="misc-body">
+                                        <div class="misc-category">
+                                            Mathematics
+                                        </div>
+                                        <div class="misc-name">
+                                            AMC &amp; Australian Mathematics
+                                            Olympiad (AMO)
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="misc-card">
+                                    <div class="misc-icon">🔬</div>
+                                    <div class="misc-body">
+                                        <div class="misc-category">Science</div>
+                                        <div class="misc-name">
+                                            RACI Chemistry Olympiad &amp;
+                                            Australian Physics Olympiad
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="misc-card">
+                                    <div class="misc-icon">🎵</div>
+                                    <div class="misc-body">
+                                        <div class="misc-category">
+                                            Music — AMEB
+                                        </div>
+                                        <div class="misc-name">
+                                            Flute Grade 8
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="misc-card">
+                                    <div class="misc-icon">🏐</div>
+                                    <div class="misc-body">
+                                        <div class="misc-category">Sport</div>
+                                        <div class="misc-name">
+                                            Certified Volleyball Referee —
+                                            Volleyball NSW
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="misc-card">
+                                    <div class="misc-icon">🇯🇵</div>
+                                    <div class="misc-body">
+                                        <div class="misc-category">
+                                            Language
+                                        </div>
+                                        <div class="misc-name">
+                                            JLPT N5 — Japanese Language
+                                            Proficiency Test
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /content -->
+                </div>
+                <!-- /page achievements -->
+                <!-- ================= PROJECT DETAIL PAGES ================= -->
+
+                <!-- GAIA -->
+                <div class="page hidden" data-page="project-gaia">
+                    <div class="content project-detail">
+                        <button class="btn" data-page="projects">
+                            ← Back to Projects
+                        </button>
+
+                        <h2>Stellar Property Prediction (GAIA DR2)</h2>
+
+                        <div class="project-block">
+                            <p>
+                                Four-month machine learning research project
+                                analysing regression models on the GAIA DR2
+                                stellar dataset to predict stellar parameters
+                                such as brightness, mass, and metallicity.
+                            </p>
+                        </div>
+
+                        <div class="project-block">
+                            <p>
+                                After performing a literature review, a research
+                                gap was identified around ML-based stellar
+                                brightness prediction. Multiple regression
+                                models were implemented and statistically
+                                evaluated using F-tests and Pearson correlation
+                                (α = 0.05).
+                            </p>
+                        </div>
+
+                        <div class="project-block">
+                            <p>
+                                Best models achieved ~99.6% accuracy. Polynomial
+                                regression and random forest performed
+                                strongest, while SVR showed higher error.
+                            </p>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://lnkd.in/eAgczC48" target="_blank"
+                                >📄 Report & Code</a
+                            >
+                            <a
+                                href="https://www.linkedin.com/feed/update/urn:li:activity:7185778524597723137/"
+                                target="_blank"
+                            >
+                                💼 LinkedIn Post
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ALEXA -->
+                <div class="page hidden" data-page="project-alexa">
+                    <div class="content project-detail">
+                        <button class="btn" data-page="projects">
+                            ← Back to Projects
+                        </button>
+
+                        <h2>Alexa Horizon – Space Voice Assistant</h2>
+
+                        <div class="project-block">
+                            <p>
+                                Voice-first space-themed assistant integrating
+                                live APIs, NLP, and serverless backend
+                                infrastructure.
+                            </p>
+                        </div>
+
+                        <div class="project-block">
+                            <p>
+                                Built using Python, Flask-Ask, AWS Lambda,
+                                DynamoDB, REST APIs, and SSML. Tested locally on
+                                a Linux homelab using Docker and Raspberry Pi.
+                            </p>
+                        </div>
+
+                        <div class="project-block">
+                            <p>
+                                Currently extending into an ML pipeline for
+                                predicting movements in space-sector equities
+                                using NLP sentiment analysis.
+                            </p>
+                        </div>
+
+                        <div class="project-links">
+                            <a
+                                href="https://www.linkedin.com/feed/update/urn:li:activity:7364827627322286080/"
+                                target="_blank"
+                            >
+                                💼 LinkedIn Post
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MATCHPOINT -->
+                <div class="page hidden" data-page="project-matchpoint">
+                    <div class="content project-detail">
+                        <button class="btn" data-page="projects">
+                            ← Back to Projects
+                        </button>
+
+                        <h2>MatchPoint – Biomechanics Tennis Platform</h2>
+
+                        <div class="project-block">
+                            <p>
+                                Computer vision-powered tennis platform built at
+                                Hack48 that analyses biomechanics and swing
+                                footage to generate personalised movement
+                                insights.
+                            </p>
+                        </div>
+
+                        <div class="project-block">
+                            <p>
+                                Combines dominant side detection, flexibility
+                                profiling, injury history, and CV-based swing
+                                analysis to adapt technique to an individual’s
+                                body.
+                            </p>
+                        </div>
+
+                        <div class="project-block">
+                            <p>Reached 200+ users within 24 hours.</p>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://www.matchpoint.fit" target="_blank"
+                                >🌐 Live Website</a
+                            >
+                        </div>
+                    </div>
+                </div>
+
+                <!-- URBAN COOLING -->
+                <div class="page hidden" data-page="project-urban">
+                    <div class="content project-detail">
+                        <button class="btn" data-page="projects">
+                            ← Back to Projects
+                        </button>
+
+                        <h2>Sydney Urban Cooling</h2>
+
+                        <div class="project-block">
+                            <p>
+                                Interactive web simulation showing how
+                                increasing tree canopy coverage can reduce
+                                Sydney’s urban heat islands.
+                            </p>
+                        </div>
+
+                        <div class="project-block">
+                            <p>
+                                Users can draw trees, simulate temperature
+                                change, upload community readings, and view live
+                                heatmaps.
+                            </p>
+                        </div>
+
+                        <div class="project-block">
+                            <p>
+                                Built with HTML, CSS, JavaScript, Leaflet.js,
+                                and OpenWeather API.
+                            </p>
+                        </div>
+
+                        <div class="project-links">
+                            <a
+                                href="https://github.com/Kso6/COMMSTEM-X-CANVA-HACKATHON"
+                                target="_blank"
+                            >
+                                💻 GitHub Repository
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SHARKS -->
+                <div class="page hidden" data-page="project-sharks">
+                    <div class="content project-detail">
+                        <button class="btn" data-page="projects">
+                            ← Back to Projects
+                        </button>
+
+                        <h2>Sharks From Space</h2>
+
+                        <div class="project-block">
+                            <p>
+                                World-first platform integrating real-time NASA
+                                satellite data (SWOT, MODIS, PACE) with AI to
+                                predict shark foraging behaviour with 87%
+                                validated accuracy.
+                            </p>
+                        </div>
+
+                        <div class="project-block">
+                            <p>
+                                Includes a novel 4D spatiotemporal Shark
+                                Foraging Index and a revolutionary non-invasive
+                                gastric biosensor for validation.
+                            </p>
+                        </div>
+
+                        <div class="project-block">
+                            <p>
+                                Aims to improve marine conservation and reduce
+                                shark-human conflict globally.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LOREAL -->
+                <div class="page hidden" data-page="project-loreal">
+                    <div class="content project-detail">
+                        <button class="btn" data-page="projects">
+                            ← Back to Projects
+                        </button>
+
+                        <h2>L'Oréal Hackathon</h2>
+
+                        <div class="project-block">
+                            <p>Currently in development.</p>
+                        </div>
+
+                        <div class="project-links">
+                            <a
+                                href="https://github.com/Kso6/Loreal-Hackathon"
+                                target="_blank"
+                            >
+                                💻 GitHub Repository
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ace right-ace" id="rightAce">
+                <div class="ace-inner">
+                    <div class="ace-rank">A</div>
+                    <div class="ace-suit" id="rightSuit">♥</div>
+                    <div class="ace-name" id="rightName">PROJECTS</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SHUFFLE -->
+        <div id="shuffleOverlay" class="shuffle-overlay hidden">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-face">♣</div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
 </html>

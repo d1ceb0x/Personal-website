@@ -1309,6 +1309,231 @@ body {
     }
 }
 
+/* ==========================================
+   ACHIEVEMENTS PAGE — add to styles.css
+   ========================================== */
+
+/* ── Section wrapper ── */
+.ach-section {
+    margin-bottom: 42px;
+}
+.ach-section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--card-border);
+}
+.ach-section-icon {
+    font-size: 26px;
+}
+.ach-section-title {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--accent-teal);
+    letter-spacing: 0.5px;
+}
+
+/* ── Certifications grid ── */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+}
+.cert-card {
+    position: relative;
+    background: var(--bg-secondary);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 18px 18px 18px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    overflow: hidden;
+    transition:
+        border-color 0.25s,
+        transform 0.25s,
+        box-shadow 0.25s;
+}
+.cert-card:hover {
+    border-color: var(--accent-teal);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+.cert-card-accent {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, var(--rose-light), var(--rose-dark));
+    border-radius: 12px 0 0 12px;
+}
+.cert-card-body {
+    flex: 1;
+}
+.cert-issuer {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--accent-blue);
+    margin-bottom: 4px;
+}
+.cert-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+.cert-badge {
+    align-self: flex-start;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    background: rgba(44, 95, 124, 0.12);
+    color: var(--accent-teal);
+    border: 1px solid var(--accent-teal);
+    border-radius: 20px;
+}
+
+/* ── Hackathon list ── */
+.hack-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.hack-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 24px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--card-border);
+    border-radius: 14px;
+    transition:
+        border-color 0.25s,
+        transform 0.25s,
+        box-shadow 0.25s;
+}
+.hack-item:hover {
+    border-color: var(--accent-teal);
+    transform: translateX(4px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+.hack-place {
+    min-width: 56px;
+    height: 56px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+.hack-place sup {
+    font-size: 11px;
+}
+.hack-place.gold {
+    background: linear-gradient(135deg, #d4a017, #f5c842);
+    color: #3a2a00;
+}
+.hack-place.silver {
+    background: linear-gradient(135deg, #8a8a8a, #c5c5c5);
+    color: #1a1a1a;
+}
+.hack-place.bronze {
+    background: linear-gradient(135deg, var(--rose-dark), var(--rose-gold));
+    color: #fff;
+}
+.hack-place.milestone {
+    background: linear-gradient(135deg, var(--accent-teal), var(--accent-blue));
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.hack-info {
+    flex: 1;
+}
+.hack-event {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+.hack-detail {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+.hack-medal {
+    font-size: 28px;
+    flex-shrink: 0;
+}
+
+/* ── Miscellaneous grid ── */
+.misc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 14px;
+}
+.misc-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 18px 20px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    transition:
+        border-color 0.25s,
+        transform 0.25s;
+}
+.misc-card:hover {
+    border-color: var(--rose-gold);
+    transform: translateY(-3px);
+}
+.misc-icon {
+    font-size: 30px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+.misc-category {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--rose-gold);
+    margin-bottom: 4px;
+}
+.misc-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .cert-grid,
+    .misc-grid {
+        grid-template-columns: 1fr;
+    }
+    .hack-item {
+        flex-wrap: wrap;
+    }
+    .hack-medal {
+        display: none;
+    }
+}
+
 /* ========================= */
 /* MOBILE MODE */
 /* ========================= */
