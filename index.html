@@ -4,7 +4,6 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Ishan Kulkarni - ML Portfolio</title>
-
         <link rel="stylesheet" href="styles.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,7 +12,6 @@
             rel="stylesheet"
         />
     </head>
-
     <body>
         <div class="mobile-nav hide-on-scroll">
             <button data-section="about">About</button>
@@ -22,7 +20,6 @@
             <button data-section="contact">Contact</button>
         </div>
 
-        <!-- ================= CARD BACKGROUND ================= -->
         <div class="card-background">
             <script>
                 for (let r = 1; r <= 5; r++) {
@@ -35,19 +32,17 @@
             </script>
         </div>
 
-        <!-- ================= TOP BAR ================= -->
         <div class="theme-toggle hide-on-scroll" id="themeToggle">
             <div class="toggle-icon">☀️</div>
         </div>
         <div class="mini-time hide-on-scroll" id="miniTime">00:00:00</div>
-
         <div class="home-button hidden" id="homeButton">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
                 <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
             </svg>
         </div>
 
-        <!-- ================= WATCH ================= -->
+        <!-- WATCH -->
         <div class="watch-scene" id="watchScene">
             <div class="watch-assembly">
                 <div class="crown">
@@ -57,17 +52,13 @@
                         <div class="crown-line"></div>
                     </div>
                 </div>
-
                 <div class="bezel" id="bezel">
                     <div class="bezel-markers" id="bezelMarkers"></div>
                 </div>
-
                 <div class="case">
                     <div class="crystal"></div>
-
                     <div class="dial" id="dial">
                         <div class="sunburst"></div>
-
                         <div class="indices">
                             <div class="idx" style="--i: 1">
                                 <div class="idx-mark"></div>
@@ -94,7 +85,6 @@
                                 <div class="idx-mark"></div>
                             </div>
                         </div>
-
                         <div
                             class="dial-btn"
                             data-section="contact"
@@ -123,24 +113,20 @@
                         >
                             AWARDS
                         </div>
-
                         <div class="brand-top">
                             <div class="brand-name">ISHAN KULKARNI</div>
                             <div class="brand-model">
                                 ML STUDENT & RESEARCHER
                             </div>
                         </div>
-
                         <div class="brand-bottom">
                             <div class="cert-line">SUPERLATIVE CHRONOMETER</div>
                             <div class="cert-line">OFFICIALLY CERTIFIED</div>
                         </div>
-
                         <div class="date-box">
                             <span class="date-num" id="dateNum">01</span>
                         </div>
                     </div>
-
                     <div class="hands">
                         <div class="hand hour" id="hourHand"></div>
                         <div class="hand minute" id="minuteHand"></div>
@@ -151,7 +137,7 @@
             </div>
         </div>
 
-        <!-- ================= CONTENT ZONE ================= -->
+        <!-- CONTENT ZONE -->
         <div class="content-zone hidden" id="contentZone">
             <div class="ace left-ace" id="leftAce">
                 <div class="ace-inner">
@@ -162,7 +148,7 @@
             </div>
 
             <div class="main-content" id="mainContent">
-                <!-- ABOUT -->
+                <!-- ===== ABOUT ===== -->
                 <div class="page" data-page="about">
                     <h2>About Me</h2>
                     <div class="content">
@@ -173,79 +159,561 @@
                             research.
                         </p>
 
-                        <div class="grid-2">
-                            <div class="box">
-                                <h3>Background</h3>
-                                <p>
-                                    Bachelor of Advanced Computing
-                                    (2025–2028)<br />
-                                    Dalyell Scholar<br />
-                                    NCSS 2024
-                                </p>
+                        <!-- EDUCATION -->
+                        <div class="about-section">
+                            <div class="about-section-header">
+                                <span class="about-section-icon">🎓</span>
+                                <h3 class="about-section-title">Education</h3>
                             </div>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-body">
+                                        <div class="timeline-header">
+                                            <div class="timeline-title">
+                                                Bachelor of Advanced Computing
+                                            </div>
+                                            <div class="timeline-badge">
+                                                88 WAM · Dalyell Scholar
+                                            </div>
+                                        </div>
+                                        <div class="timeline-org">
+                                            University of Sydney · Feb 2025 –
+                                            Nov 2028
+                                        </div>
+                                        <div class="timeline-detail">
+                                            GDG · SUDATA · SYNCS · Competitive
+                                            Programming
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-body">
+                                        <div class="timeline-header">
+                                            <div class="timeline-title">
+                                                Hills Grammar
+                                            </div>
+                                            <div class="timeline-badge">
+                                                ATAR 97.60
+                                            </div>
+                                        </div>
+                                        <div class="timeline-org">
+                                            2019 – 2024
+                                        </div>
+                                        <div class="timeline-detail">
+                                            Co-founder of Programming
+                                            Co-curricular · ex Head of
+                                            Competitive Programming Challenges
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                            <div class="box">
-                                <h3>Skills</h3>
-                                <ul>
-                                    <li>Python, Java, JavaScript, SQL</li>
-                                    <li>Machine Learning</li>
-                                    <li>Computer Vision</li>
-                                    <li>Backend Development</li>
-                                    <li>HTML & CSS</li>
-                                </ul>
+                        <!-- EXPERIENCE -->
+                        <div class="about-section">
+                            <div class="about-section-header">
+                                <span class="about-section-icon">💼</span>
+                                <h3 class="about-section-title">Experience</h3>
+                            </div>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-body">
+                                        <div class="timeline-header">
+                                            <div class="timeline-title">
+                                                Academic Tutor
+                                            </div>
+                                            <div class="timeline-badge">
+                                                Current
+                                            </div>
+                                        </div>
+                                        <div class="timeline-org">
+                                            Hills Grammar · Feb 2025 – Present
+                                        </div>
+                                        <div class="timeline-detail">
+                                            One-on-one academic tutoring across
+                                            multiple subjects; communication and
+                                            critical thinking focus.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-body">
+                                        <div class="timeline-header">
+                                            <div class="timeline-title">
+                                                Assistant Volleyball Coach
+                                            </div>
+                                            <div class="timeline-badge">
+                                                Current
+                                            </div>
+                                        </div>
+                                        <div class="timeline-org">
+                                            Hills Grammar · Aug 2025 – Present
+                                        </div>
+                                        <div class="timeline-detail">
+                                            Coached boys and girls teams to
+                                            Silver and Gold placements —
+                                            leadership and high-pressure
+                                            decision-making.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-body">
+                                        <div class="timeline-header">
+                                            <div class="timeline-title">
+                                                Back End Developer
+                                            </div>
+                                            <div class="timeline-badge">
+                                                Freelance
+                                            </div>
+                                        </div>
+                                        <div class="timeline-org">
+                                            Hack48 · Jul 2025 · Sydney
+                                        </div>
+                                        <div class="timeline-detail">
+                                            Co-founded MatchPoint.fit — a tennis
+                                            biomechanics analyser that reached
+                                            1,000+ users within 24 hours of
+                                            launch.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-body">
+                                        <div class="timeline-header">
+                                            <div class="timeline-title">
+                                                Supervisor &amp; Chef
+                                            </div>
+                                            <div class="timeline-badge">
+                                                4 yrs
+                                            </div>
+                                        </div>
+                                        <div class="timeline-org">
+                                            Mad Mex · Jan 2022 – Present
+                                        </div>
+                                        <div class="timeline-detail">
+                                            Team leadership, culinary
+                                            management, stock control, and
+                                            high-pressure kitchen operations.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-body">
+                                        <div class="timeline-header">
+                                            <div class="timeline-title">
+                                                Academic Tutor
+                                            </div>
+                                            <div class="timeline-badge">
+                                                1 yr
+                                            </div>
+                                        </div>
+                                        <div class="timeline-org">
+                                            Kumon Australia &amp; New Zealand ·
+                                            Feb 2024 – Mar 2025
+                                        </div>
+                                        <div class="timeline-detail">
+                                            Structured maths and literacy
+                                            tutoring; communication and critical
+                                            thinking.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-body">
+                                        <div class="timeline-header">
+                                            <div class="timeline-title">
+                                                NCSS Student
+                                            </div>
+                                            <div class="timeline-badge">
+                                                Grok Academy
+                                            </div>
+                                        </div>
+                                        <div class="timeline-org">
+                                            National Computer Science Summer
+                                            School · Jan – Feb 2024 · Melbourne
+                                        </div>
+                                        <div class="timeline-detail">
+                                            Intensive two-week CS program
+                                            covering algorithms, software
+                                            development, and collaborative
+                                            project work.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- TECHNICAL SKILLS -->
+                        <div class="about-section">
+                            <div class="about-section-header">
+                                <span class="about-section-icon">💻</span>
+                                <h3 class="about-section-title">
+                                    Technical Skills
+                                </h3>
+                            </div>
+                            <div class="skills-clusters">
+                                <div class="skill-cluster">
+                                    <div class="skill-cluster-label">
+                                        Languages
+                                    </div>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag primary"
+                                            >Python</span
+                                        >
+                                        <span class="skill-tag primary"
+                                            >Java</span
+                                        >
+                                        <span class="skill-tag primary"
+                                            >JavaScript</span
+                                        >
+                                        <span class="skill-tag">C</span>
+                                        <span class="skill-tag">C++</span>
+                                        <span class="skill-tag">C#</span>
+                                        <span class="skill-tag">R</span>
+                                        <span class="skill-tag">SQL</span>
+                                        <span class="skill-tag">CUDA</span>
+                                    </div>
+                                </div>
+                                <div class="skill-cluster">
+                                    <div class="skill-cluster-label">
+                                        AI / ML
+                                    </div>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag primary"
+                                            >Machine Learning</span
+                                        >
+                                        <span class="skill-tag primary"
+                                            >Computer Vision</span
+                                        >
+                                        <span class="skill-tag primary"
+                                            >NLP</span
+                                        >
+                                        <span class="skill-tag"
+                                            >Logistic Regression</span
+                                        >
+                                        <span class="skill-tag"
+                                            >Recommender Systems</span
+                                        >
+                                        <span class="skill-tag"
+                                            >Data Analysis</span
+                                        >
+                                        <span class="skill-tag"
+                                            >Geospatial Data</span
+                                        >
+                                    </div>
+                                </div>
+                                <div class="skill-cluster">
+                                    <div class="skill-cluster-label">
+                                        Platforms &amp; Tools
+                                    </div>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag primary"
+                                            >AWS</span
+                                        >
+                                        <span class="skill-tag"
+                                            >Front-End Development</span
+                                        >
+                                        <span class="skill-tag"
+                                            >Computer Simulations</span
+                                        >
+                                        <span class="skill-tag"
+                                            >Deployment</span
+                                        >
+                                        <span class="skill-tag">Testing</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SOFT SKILLS -->
+                        <div class="about-section">
+                            <div class="about-section-header">
+                                <span class="about-section-icon">🤝</span>
+                                <h3 class="about-section-title">Soft Skills</h3>
+                            </div>
+                            <div class="soft-skills-grid">
+                                <div class="soft-skill-item">
+                                    <span class="soft-skill-dot"></span>Critical
+                                    Thinking
+                                </div>
+                                <div class="soft-skill-item">
+                                    <span class="soft-skill-dot"></span>Team
+                                    Leadership
+                                </div>
+                                <div class="soft-skill-item">
+                                    <span class="soft-skill-dot"></span
+                                    >Communication
+                                </div>
+                                <div class="soft-skill-item">
+                                    <span class="soft-skill-dot"></span>Research
+                                    Skills
+                                </div>
+                                <div class="soft-skill-item">
+                                    <span class="soft-skill-dot"></span
+                                    >Presentation Skills
+                                </div>
+                                <div class="soft-skill-item">
+                                    <span class="soft-skill-dot"></span>Time
+                                    Management
+                                </div>
+                                <div class="soft-skill-item">
+                                    <span class="soft-skill-dot"></span>Teamwork
+                                </div>
+                                <div class="soft-skill-item">
+                                    <span class="soft-skill-dot"></span>Culinary
+                                    Management
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- LANGUAGES -->
+                        <div class="about-section">
+                            <div class="about-section-header">
+                                <span class="about-section-icon">🌐</span>
+                                <h3 class="about-section-title">Languages</h3>
+                            </div>
+                            <div class="lang-grid">
+                                <div class="lang-card">
+                                    <div class="lang-flag">🇦🇺</div>
+                                    <div class="lang-info">
+                                        <div class="lang-name">English</div>
+                                        <div class="lang-level">Native</div>
+                                    </div>
+                                    <div class="lang-bar-wrap">
+                                        <div
+                                            class="lang-bar"
+                                            style="--lang-pct: 100%"
+                                        ></div>
+                                    </div>
+                                </div>
+                                <div class="lang-card">
+                                    <div class="lang-flag">🇮🇳</div>
+                                    <div class="lang-info">
+                                        <div class="lang-name">Marathi</div>
+                                        <div class="lang-level">Heritage</div>
+                                    </div>
+                                    <div class="lang-bar-wrap">
+                                        <div
+                                            class="lang-bar"
+                                            style="--lang-pct: 70%"
+                                        ></div>
+                                    </div>
+                                </div>
+                                <div class="lang-card">
+                                    <div class="lang-flag">🇯🇵</div>
+                                    <div class="lang-info">
+                                        <div class="lang-name">Japanese</div>
+                                        <div class="lang-level">JLPT N5</div>
+                                    </div>
+                                    <div class="lang-bar-wrap">
+                                        <div
+                                            class="lang-bar"
+                                            style="--lang-pct: 22%"
+                                        ></div>
+                                    </div>
+                                </div>
+                                <div class="lang-card">
+                                    <div class="lang-flag">🇩🇪</div>
+                                    <div class="lang-info">
+                                        <div class="lang-name">German</div>
+                                        <div class="lang-level">Beginner</div>
+                                    </div>
+                                    <div class="lang-bar-wrap">
+                                        <div
+                                            class="lang-bar"
+                                            style="--lang-pct: 15%"
+                                        ></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- HOBBIES -->
+                        <div class="about-section">
+                            <div class="about-section-header">
+                                <span class="about-section-icon">✨</span>
+                                <h3 class="about-section-title">
+                                    Outside the Terminal
+                                </h3>
+                            </div>
+                            <div class="hobby-grid">
+                                <div class="hobby-card">
+                                    <div class="hobby-icon">🪄</div>
+                                    <div class="hobby-name">Magic</div>
+                                    <div class="hobby-desc">
+                                        Card sleights, misdirection, close-up
+                                        performance
+                                    </div>
+                                </div>
+                                <div class="hobby-card">
+                                    <div class="hobby-icon">🍳</div>
+                                    <div class="hobby-name">Cooking</div>
+                                    <div class="hobby-desc">
+                                        Former Mad Mex chef — from prep line to
+                                        plating
+                                    </div>
+                                </div>
+                                <div class="hobby-card">
+                                    <div class="hobby-icon">📚</div>
+                                    <div class="hobby-name">Reading</div>
+                                    <div class="hobby-desc">
+                                        Non-fiction, sci-fi, and anything with
+                                        big ideas
+                                    </div>
+                                </div>
+                                <div class="hobby-card">
+                                    <div class="hobby-icon">🏋️</div>
+                                    <div class="hobby-name">Gym</div>
+                                    <div class="hobby-desc">
+                                        Strength training and progressive
+                                        overload
+                                    </div>
+                                </div>
+                                <div class="hobby-card">
+                                    <div class="hobby-icon">🧬</div>
+                                    <div class="hobby-name">Biohacking</div>
+                                    <div class="hobby-desc">
+                                        Sleep, nutrition, and performance
+                                        optimisation
+                                    </div>
+                                </div>
+                                <div class="hobby-card">
+                                    <div class="hobby-icon">🇩🇪</div>
+                                    <div class="hobby-name">
+                                        Learning German
+                                    </div>
+                                    <div class="hobby-desc">
+                                        Working through vocab, grammar, and
+                                        speaking drills
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- CONTACT -->
+                <!-- ===== CONTACT ===== -->
                 <div class="page hidden" data-page="contact">
                     <h2>Contact</h2>
                     <div class="content">
-                        <div class="contact-grid">
-                            <a
-                                href="mailto:inusyd@gmail.com"
-                                class="contact-card"
-                            >
-                                <span class="contact-icon">📧</span>
-                                <span class="contact-label">Email</span>
-                                <span class="contact-value"
-                                    >inusyd@gmail.com</span
+                        <p class="intro">
+                            Open to internships, research collaborations, and
+                            interesting problems.
+                        </p>
+                        <div class="terminal-window">
+                            <div class="terminal-titlebar">
+                                <div class="terminal-dots">
+                                    <span class="t-dot t-red"></span>
+                                    <span class="t-dot t-yellow"></span>
+                                    <span class="t-dot t-green"></span>
+                                </div>
+                                <div class="terminal-title">
+                                    ishan@portfolio ~ contact
+                                </div>
+                            </div>
+                            <div class="terminal-body" id="terminalBody">
+                                <div class="t-line">
+                                    <span class="t-prompt"
+                                        >ishan@portfolio:~$</span
+                                    ><span class="t-cmd" id="termCmd1"></span>
+                                </div>
+                                <div class="t-output" id="termOutput1">
+                                    <div class="t-comment">
+                                        # Available channels — click any command
+                                        to open
+                                    </div>
+                                </div>
+                                <div class="t-line t-delayed-1">
+                                    <span class="t-prompt"
+                                        >ishan@portfolio:~$</span
+                                    ><span class="t-cmd" id="termCmd2"></span>
+                                </div>
+                                <div
+                                    class="t-output t-delayed-1"
+                                    id="termOutput2"
                                 >
-                            </a>
-
-                            <a
-                                href="https://www.linkedin.com/in/ishan-kulkarni-73015b2b5/"
-                                target="_blank"
-                                class="contact-card"
-                            >
-                                <span class="contact-icon">💼</span>
-                                <span class="contact-label">LinkedIn</span>
-                                <span class="contact-value"
-                                    >/ishan-kulkarni</span
+                                    <a
+                                        href="mailto:inusyd@gmail.com"
+                                        class="t-contact-row"
+                                        target="_blank"
+                                    >
+                                        <span class="t-flag">--email</span
+                                        ><span class="t-val"
+                                            >inusyd@gmail.com</span
+                                        ><span class="t-arrow">→</span>
+                                    </a>
+                                </div>
+                                <div class="t-line t-delayed-2">
+                                    <span class="t-prompt"
+                                        >ishan@portfolio:~$</span
+                                    ><span class="t-cmd" id="termCmd3"></span>
+                                </div>
+                                <div
+                                    class="t-output t-delayed-2"
+                                    id="termOutput3"
                                 >
-                            </a>
-
-                            <a
-                                href="https://github.com/d1ceb0x/"
-                                target="_blank"
-                                class="contact-card"
+                                    <a
+                                        href="https://www.linkedin.com/in/ishan-kulkarni-73015b2b5/"
+                                        class="t-contact-row"
+                                        target="_blank"
+                                    >
+                                        <span class="t-flag">--linkedin</span
+                                        ><span class="t-val"
+                                            >/ishan-kulkarni</span
+                                        ><span class="t-arrow">→</span>
+                                    </a>
+                                </div>
+                                <div class="t-line t-delayed-3">
+                                    <span class="t-prompt"
+                                        >ishan@portfolio:~$</span
+                                    ><span class="t-cmd" id="termCmd4"></span>
+                                </div>
+                                <div
+                                    class="t-output t-delayed-3"
+                                    id="termOutput4"
+                                >
+                                    <a
+                                        href="https://github.com/d1ceb0x/"
+                                        class="t-contact-row"
+                                        target="_blank"
+                                    >
+                                        <span class="t-flag">--github</span
+                                        ><span class="t-val">/d1ceb0x</span
+                                        ><span class="t-arrow">→</span>
+                                    </a>
+                                </div>
+                                <div class="t-line t-delayed-4">
+                                    <span class="t-prompt"
+                                        >ishan@portfolio:~$</span
+                                    ><span class="t-cmd" id="termCmd5"></span
+                                    ><span class="t-cursor">█</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="terminal-status">
+                            <span class="t-status-dot"></span>
+                            <span
+                                >Available for internships &amp; collaborations
+                                · Sydney, NSW · responds within 24h</span
                             >
-                                <span class="contact-icon">💻</span>
-                                <span class="contact-label">GitHub</span>
-                                <span class="contact-value">/d1ceb0x</span>
-                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- PROJECTS -->
+                <!-- ===== PROJECTS ===== -->
                 <div class="page hidden" data-page="projects">
                     <h2>Projects</h2>
-
                     <div class="content">
                         <div class="project-grid">
-                            <!-- GAIA -->
                             <div class="project">
                                 <h3>Stellar Property Prediction (GAIA DR2)</h3>
                                 <p>
@@ -261,8 +729,6 @@
                                     View Details
                                 </button>
                             </div>
-
-                            <!-- ALEXA -->
                             <div class="project">
                                 <h3>Alexa Horizon – Space Voice Assistant</h3>
                                 <p>
@@ -277,8 +743,6 @@
                                     View Details
                                 </button>
                             </div>
-
-                            <!-- MATCHPOINT -->
                             <div class="project">
                                 <h3>
                                     MatchPoint – Biomechanics Tennis Platform
@@ -298,8 +762,6 @@
                                     View Details
                                 </button>
                             </div>
-
-                            <!-- URBAN COOLING -->
                             <div class="project">
                                 <h3>Sydney Urban Cooling</h3>
                                 <p>
@@ -314,8 +776,6 @@
                                     View Details
                                 </button>
                             </div>
-
-                            <!-- SHARKS -->
                             <div class="project">
                                 <h3>Sharks From Space</h3>
                                 <p>
@@ -331,8 +791,6 @@
                                     View Details
                                 </button>
                             </div>
-
-                            <!-- LOREAL -->
                             <div class="project">
                                 <h3>L'Oreal Hackathon</h3>
                                 <p>Active hackathon project.</p>
@@ -345,11 +803,10 @@
                     </div>
                 </div>
 
-                <!-- ================= ACHIEVEMENTS PAGE ================= -->
+                <!-- ===== ACHIEVEMENTS ===== -->
                 <div class="page hidden" data-page="achievements">
                     <h2>Awards &amp; Certifications</h2>
                     <div class="content">
-                        <!-- ── CERTIFICATIONS ─────────────────────────────── -->
                         <div class="ach-section">
                             <div class="ach-section-header">
                                 <span class="ach-section-icon">📜</span>
@@ -357,7 +814,6 @@
                                     Certifications
                                 </h3>
                             </div>
-
                             <div class="cert-grid">
                                 <div class="cert-card">
                                     <div class="cert-card-accent"></div>
@@ -371,7 +827,6 @@
                                     </div>
                                     <span class="cert-badge">Web Dev</span>
                                 </div>
-
                                 <div class="cert-card">
                                     <div class="cert-card-accent"></div>
                                     <div class="cert-card-body">
@@ -382,7 +837,6 @@
                                     </div>
                                     <span class="cert-badge">ML</span>
                                 </div>
-
                                 <div class="cert-card">
                                     <div class="cert-card-accent"></div>
                                     <div class="cert-card-body">
@@ -396,7 +850,6 @@
                                     </div>
                                     <span class="cert-badge">Python</span>
                                 </div>
-
                                 <div class="cert-card">
                                     <div class="cert-card-accent"></div>
                                     <div class="cert-card-body">
@@ -407,7 +860,6 @@
                                     </div>
                                     <span class="cert-badge">Data Science</span>
                                 </div>
-
                                 <div class="cert-card">
                                     <div class="cert-card-accent"></div>
                                     <div class="cert-card-body">
@@ -422,7 +874,6 @@
                             </div>
                         </div>
 
-                        <!-- ── HACKATHON PLACEMENTS ───────────────────────── -->
                         <div class="ach-section">
                             <div class="ach-section-header">
                                 <span class="ach-section-icon">🏆</span>
@@ -430,7 +881,6 @@
                                     Hackathon Placements
                                 </h3>
                             </div>
-
                             <div class="hack-list">
                                 <div class="hack-item">
                                     <div class="hack-place gold">
@@ -447,7 +897,6 @@
                                     </div>
                                     <span class="hack-medal">🥈</span>
                                 </div>
-
                                 <div class="hack-item">
                                     <div class="hack-place silver">HM</div>
                                     <div class="hack-info">
@@ -461,7 +910,6 @@
                                     </div>
                                     <span class="hack-medal">🌟</span>
                                 </div>
-
                                 <div class="hack-item">
                                     <div class="hack-place bronze">
                                         3<sup>rd</sup>
@@ -476,7 +924,6 @@
                                     </div>
                                     <span class="hack-medal">🥉</span>
                                 </div>
-
                                 <div class="hack-item">
                                     <div class="hack-place milestone">1K+</div>
                                     <div class="hack-info">
@@ -491,13 +938,11 @@
                             </div>
                         </div>
 
-                        <!-- ── MISCELLANEOUS ──────────────────────────────── -->
                         <div class="ach-section">
                             <div class="ach-section-header">
                                 <span class="ach-section-icon">🎖️</span>
                                 <h3 class="ach-section-title">Miscellaneous</h3>
                             </div>
-
                             <div class="misc-grid">
                                 <div class="misc-card">
                                     <div class="misc-icon">🧮</div>
@@ -511,7 +956,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="misc-card">
                                     <div class="misc-icon">📐</div>
                                     <div class="misc-body">
@@ -524,7 +968,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="misc-card">
                                     <div class="misc-icon">🔬</div>
                                     <div class="misc-body">
@@ -535,7 +978,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="misc-card">
                                     <div class="misc-icon">🎵</div>
                                     <div class="misc-body">
@@ -547,7 +989,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="misc-card">
                                     <div class="misc-icon">🏐</div>
                                     <div class="misc-body">
@@ -558,7 +999,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="misc-card">
                                     <div class="misc-icon">🇯🇵</div>
                                     <div class="misc-body">
@@ -574,20 +1014,15 @@
                             </div>
                         </div>
                     </div>
-                    <!-- /content -->
                 </div>
-                <!-- /page achievements -->
-                <!-- ================= PROJECT DETAIL PAGES ================= -->
 
-                <!-- GAIA -->
+                <!-- ===== PROJECT DETAILS ===== -->
                 <div class="page hidden" data-page="project-gaia">
                     <div class="content project-detail">
                         <button class="btn" data-page="projects">
                             ← Back to Projects
                         </button>
-
                         <h2>Stellar Property Prediction (GAIA DR2)</h2>
-
                         <div class="project-block">
                             <p>
                                 Four-month machine learning research project
@@ -596,7 +1031,6 @@
                                 such as brightness, mass, and metallicity.
                             </p>
                         </div>
-
                         <div class="project-block">
                             <p>
                                 After performing a literature review, a research
@@ -607,7 +1041,6 @@
                                 (α = 0.05).
                             </p>
                         </div>
-
                         <div class="project-block">
                             <p>
                                 Best models achieved ~99.6% accuracy. Polynomial
@@ -615,30 +1048,25 @@
                                 strongest, while SVR showed higher error.
                             </p>
                         </div>
-
                         <div class="project-links">
                             <a href="https://lnkd.in/eAgczC48" target="_blank"
-                                >📄 Report & Code</a
+                                >📄 Report &amp; Code</a
                             >
                             <a
                                 href="https://www.linkedin.com/feed/update/urn:li:activity:7185778524597723137/"
                                 target="_blank"
+                                >💼 LinkedIn Post</a
                             >
-                                💼 LinkedIn Post
-                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- ALEXA -->
                 <div class="page hidden" data-page="project-alexa">
                     <div class="content project-detail">
                         <button class="btn" data-page="projects">
                             ← Back to Projects
                         </button>
-
                         <h2>Alexa Horizon – Space Voice Assistant</h2>
-
                         <div class="project-block">
                             <p>
                                 Voice-first space-themed assistant integrating
@@ -646,7 +1074,6 @@
                                 infrastructure.
                             </p>
                         </div>
-
                         <div class="project-block">
                             <p>
                                 Built using Python, Flask-Ask, AWS Lambda,
@@ -654,7 +1081,6 @@
                                 a Linux homelab using Docker and Raspberry Pi.
                             </p>
                         </div>
-
                         <div class="project-block">
                             <p>
                                 Currently extending into an ML pipeline for
@@ -662,27 +1088,22 @@
                                 using NLP sentiment analysis.
                             </p>
                         </div>
-
                         <div class="project-links">
                             <a
                                 href="https://www.linkedin.com/feed/update/urn:li:activity:7364827627322286080/"
                                 target="_blank"
+                                >💼 LinkedIn Post</a
                             >
-                                💼 LinkedIn Post
-                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- MATCHPOINT -->
                 <div class="page hidden" data-page="project-matchpoint">
                     <div class="content project-detail">
                         <button class="btn" data-page="projects">
                             ← Back to Projects
                         </button>
-
                         <h2>MatchPoint – Biomechanics Tennis Platform</h2>
-
                         <div class="project-block">
                             <p>
                                 Computer vision-powered tennis platform built at
@@ -691,20 +1112,19 @@
                                 insights.
                             </p>
                         </div>
-
                         <div class="project-block">
                             <p>
                                 Combines dominant side detection, flexibility
                                 profiling, injury history, and CV-based swing
-                                analysis to adapt technique to an individual’s
+                                analysis to adapt technique to an individual's
                                 body.
                             </p>
                         </div>
-
                         <div class="project-block">
-                            <p>Reached 200+ users within 24 hours.</p>
+                            <p>
+                                Reached 1,000+ users within 24 hours of launch.
+                            </p>
                         </div>
-
                         <div class="project-links">
                             <a href="https://www.matchpoint.fit" target="_blank"
                                 >🌐 Live Website</a
@@ -713,23 +1133,19 @@
                     </div>
                 </div>
 
-                <!-- URBAN COOLING -->
                 <div class="page hidden" data-page="project-urban">
                     <div class="content project-detail">
                         <button class="btn" data-page="projects">
                             ← Back to Projects
                         </button>
-
                         <h2>Sydney Urban Cooling</h2>
-
                         <div class="project-block">
                             <p>
                                 Interactive web simulation showing how
                                 increasing tree canopy coverage can reduce
-                                Sydney’s urban heat islands.
+                                Sydney's urban heat islands.
                             </p>
                         </div>
-
                         <div class="project-block">
                             <p>
                                 Users can draw trees, simulate temperature
@@ -737,34 +1153,28 @@
                                 heatmaps.
                             </p>
                         </div>
-
                         <div class="project-block">
                             <p>
                                 Built with HTML, CSS, JavaScript, Leaflet.js,
                                 and OpenWeather API.
                             </p>
                         </div>
-
                         <div class="project-links">
                             <a
                                 href="https://github.com/Kso6/COMMSTEM-X-CANVA-HACKATHON"
                                 target="_blank"
+                                >💻 GitHub Repository</a
                             >
-                                💻 GitHub Repository
-                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- SHARKS -->
                 <div class="page hidden" data-page="project-sharks">
                     <div class="content project-detail">
                         <button class="btn" data-page="projects">
                             ← Back to Projects
                         </button>
-
                         <h2>Sharks From Space</h2>
-
                         <div class="project-block">
                             <p>
                                 World-first platform integrating real-time NASA
@@ -773,7 +1183,6 @@
                                 validated accuracy.
                             </p>
                         </div>
-
                         <div class="project-block">
                             <p>
                                 Includes a novel 4D spatiotemporal Shark
@@ -781,7 +1190,6 @@
                                 gastric biosensor for validation.
                             </p>
                         </div>
-
                         <div class="project-block">
                             <p>
                                 Aims to improve marine conservation and reduce
@@ -791,26 +1199,21 @@
                     </div>
                 </div>
 
-                <!-- LOREAL -->
                 <div class="page hidden" data-page="project-loreal">
                     <div class="content project-detail">
                         <button class="btn" data-page="projects">
                             ← Back to Projects
                         </button>
-
                         <h2>L'Oréal Hackathon</h2>
-
                         <div class="project-block">
                             <p>Currently in development.</p>
                         </div>
-
                         <div class="project-links">
                             <a
                                 href="https://github.com/Kso6/Loreal-Hackathon"
                                 target="_blank"
+                                >💻 GitHub Repository</a
                             >
-                                💻 GitHub Repository
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -825,7 +1228,6 @@
             </div>
         </div>
 
-        <!-- SHUFFLE -->
         <div id="shuffleOverlay" class="shuffle-overlay hidden">
             <div class="flip-card">
                 <div class="flip-card-inner">
